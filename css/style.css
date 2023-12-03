@@ -22,11 +22,115 @@
 /* Mobile version */
 body {
   background-color: var(--very-dark-blue);
+  font-family: var(--inter-ft);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  margin: 150px auto;
 }
 
-.container {
+.card-container {
   width: 350px;
-  height: 100dvh;
+  background-color: var(--dark-bg-card);
+  border-radius: 10px;
+}
+.img-container {
+  background: var(--soft-violet);
+  filter: contrast(130%);
+  border-radius: 15px 15px 0 0;
+  height: 257px;
+}
+.mobile-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.6;
+  border-radius: 15px 15px 0 0;
+}
+
+.desktop-img {
+  display: none;
+}
+.card-text-content {
+  padding: 20px;
+  text-align: center;
+}
+.text-title {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 20px;
+  font-family: var(--inter-ft);
+  color: var(--white);
+}
+.text-title span {
+  font-family: var(--inter-ft);
+  color: var(--soft-violet);
+}
+.text-description {
+  color: var(--p-white);
+  line-height: 1.5;
+  font-size: 15px;
+  margin: 0 20px;
+}
+.card-stats {
+  margin: 30px;
+}
+
+.stats-companies,
+.stats-queries,
+.stats-templates {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 15px;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.stats-companies span,
+.stats-queries span,
+.stats-templates span {
+  font-family: var(--lexend-deca-ft);
+  font-weight: lighter;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--stats-white);
+  margin: 5px;
+}
+
+/* Desktop version */
+@media screen and (min-width: 1024px) {
+    .card-container{
+        width: 650px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .card-content{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .img-container{
+        width: 100%;
+    }
+    .mobile-img{
+        display: none;
+    }
+    .desktop-img{
+        display: block;
+        width: 100%;
+    }
+    .card-text-content{
+        padding: 20px;
+    }
+    .card-stats{
+        display: flex;
+    }
 }
 
 .attribution {
